@@ -1,8 +1,10 @@
 require("dotenv").config();
 const express=require("express");
 const mongoose=require("mongoose");
+const cors=require("cors")
 const app=express();
 app.use(express.json());
+app.use(cors())
 
 mongoose.connect("mongodb+srv://bharath21903:mech4004@cluster1.vmfq8fi.mongodb.net/noteapp");
 
